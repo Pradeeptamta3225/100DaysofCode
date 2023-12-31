@@ -11,24 +11,30 @@
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #f0fdfa;
 }
 
 .container {
     text-align: center;
-    width: 600px;
+    width: 800px;
     height: 600px;
     border-radius: 4rem;
     background-color: #0f766e;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.clock-container {
-    margin-top: 8rem;
-    font-size: 7rem;
-
+#dayDate{
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 2.2rem;
     color: #f0fdfa;
 
+}
+.clock-container {
+    margin-top: 8rem;
+    margin-left: 1rem;
+    font-size: 8rem;
+    color: #f0fdfa;
     /* color: #86efac; */
 }
