@@ -6,14 +6,29 @@
 
 
 .wrapper{
-    width: 100vw;
-   height: 100vh;
-    background-color: green;
+    width: 100%;
+    min-height: 100vh;
+    background: green;
+    padding: 10px;
 }
 
+.to-do{
+   width: 550px;
+   height: 540px;
+   background: white;
+  margin-top: 10rem;
+  margin-left: 35rem;
+  margin-right: 10rem;
+   padding: 40px 90px 70px;
+   border-radius: 30px;
+   
+   
 
-.detail{
+}
+
+.to-do h2{
+    color: #002765;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
