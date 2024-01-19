@@ -32,3 +32,7 @@
     align-items: center;
     margin-bottom: 20px;
 }
+
+.row input{
+    flex: 1;
+}
