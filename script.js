@@ -5,7 +5,7 @@ function clock(){
     let today = new Date();
     
     document.getElementById("dayDate").innerHTML = (daysOfWeek[today.getDay()] + " " +
-     today.getDate() + " " + monthsName[today.getMonth()] + " " + today.getFullYear());
+    today.getDate() + " " + monthsName[today.getMonth()] + " " + today.getFullYear());
 }let inter = setInterval(clock,400);
 
 
