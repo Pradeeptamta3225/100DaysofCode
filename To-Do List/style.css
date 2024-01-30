@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background: green;
+    padding: 10px;
+}
+
+.to-do{
+   width: 550px;
+   height: 540px;
+   background: white;
+  margin-top: 10rem;
+  margin-left: 35rem;
+  margin-right: 10rem;
+   padding: 40px 90px 70px;
+   border-radius: 30px;
+   
+   
+
+}
+
+.to-do h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row input{
+    flex: 1;
+}

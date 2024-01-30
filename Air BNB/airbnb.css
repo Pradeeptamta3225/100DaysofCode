@@ -1,0 +1,48 @@
+#logo{
+    margin: 2rem;
+    margin-left: 0.8rem;
+    padding-left: 2rem;
+}
+
+.navbar-content{
+    padding-left: 1rem;
+   width: 30rem;
+   height: 3rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(220, 217, 217);
+    text-align: center;
+}
+
+
+.card {
+    padding-left: 2rem;
+    padding-top: 3rem;
+    text-align: left;
+  }
+
+  .card span {
+    color: gray;
+  }
+  
+  .row-one {
+    display: flex;
+    flex-direction: row;
+
+  }
+  
+  .row-two{
+        display: flex;
+        flex-direction: row;
+  }
+
+.image{
+    gap: 5px;
+    border-radius: 1rem;
+    width: 280px;
+    height: 280px;
+    }
+
+.hr{
+    border: 1px solid rgb(233, 231, 231);
+}
+
