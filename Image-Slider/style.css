@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: black;
-}
+
 
 .wrapper{
     display: flex;
@@ -19,6 +17,7 @@ body{
     width: 900px;
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .gallry-slider{
@@ -29,8 +28,8 @@ body{
     grid-gap: 20px;
     padding: 10px;
     flex: none;
-   
 
+    
 }
 
 .gallry div img{
@@ -56,4 +55,15 @@ body{
     filter: grayscale(0);
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.name{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: blue;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-right: 2rem;
+    letter-spacing: 0.4rem;
 }
