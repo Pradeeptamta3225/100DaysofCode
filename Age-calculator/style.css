@@ -87,3 +87,11 @@ p span{
     font-size: 4rem;
     color:  #0535F9;
 }
+
+.name{
+    color: #0535F9;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+   margin-top: 6rem;
+   margin-left: 60rem;
+}
