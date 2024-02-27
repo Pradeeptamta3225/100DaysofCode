@@ -1,9 +1,9 @@
 const boxes = document.querySelectorAll(".box");
-const userInfo = document.querySelector("#info-user")
+const gameInfo = document.querySelector("#info-user")
 const newGameBtn = document.querySelector("#btn")
 
 let currentPlayer;
-let gridInfo;
+let gameGrid;
 
 
 const winningPosition = [
@@ -17,12 +17,43 @@ const winningPosition = [
         [2,4,6]
 ]
 
-function startGame(){
+function startGame() {
     currentPlayer = "X";
-    gridInfo = ["","","","","","","","",""];
+    gameGrid = ["","","","","","","","",""];
     newGameBtn.classList.remove("active");
-    userInfo.innerHTML = `Current Player - ${currentPlayer}`;
+    gameInfo.innerHTML = `Current Player - ${currentPlayer}`;
+}
+
+startGame();
+
+
+function swapTurn(){
+    if(currentPlayer === "X"){
+        currentPlayer = "O"
+    }
+
+    else{
+        currentPlayer = "X"
+    }
+
+    gameInfo.innerHTML = `Current Player - ${currentPlayer}`;
+}
+
+function handleClick(index) {
+    if(gameGrid[index] === "") {
+        boxes[index].innerHTML = currentPlayer;
+        gameGrid[index] = currentPlayer;
+
+        swapTurn();
+
+        checkGameEnd();
+    }
 }
 
 
-startGame();
+
+boxes.forEach((box, index) => {
+    box.addEventListener("click", () => {
+        handleClick(index);
+    })
+});
