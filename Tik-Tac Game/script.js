@@ -21,13 +21,18 @@ function startGame() {
     currentPlayer = "X";
     gameGrid = ["","","","","","","","",""];
     newGameBtn.classList.remove("active");
+    boxes.forEach((box, index) => {
+        box.innerHTML = "";
+        boxes[index].style.pointerEvents = "all"
+        });
     gameInfo.innerHTML = `Current Player - ${currentPlayer}`;
+
 }
 
 startGame();
 
 
-function swapTurn(){
+function swapPlayer() {
     if(currentPlayer === "X"){
         currentPlayer = "O"
     }
@@ -43,8 +48,9 @@ function handleClick(index) {
     if(gameGrid[index] === "") {
         boxes[index].innerHTML = currentPlayer;
         gameGrid[index] = currentPlayer;
+        boxes[index].style.pointerEvents = "none"
 
-        swapTurn();
+        swapPlayer();
 
         checkGameEnd();
     }
@@ -57,3 +63,10 @@ boxes.forEach((box, index) => {
         handleClick(index);
     })
 });
+
+newGameBtn.addEventListener("click", startGame)
+
+
+function checkGameEnd(){
+    
+}
