@@ -6,7 +6,7 @@ let currentPlayer;
 let gameGrid;
 
 
-const winningPattern = [
+const winningPosition = [
         [0,1,2],
         [3,4,5],
         [6,7,8],
@@ -24,6 +24,7 @@ function startGame() {
     boxes.forEach((box, index) => {
         box.innerHTML = "";
         boxes[index].style.pointerEvents = "all"
+        box.classList = `box box${index+1}`;
         });
     gameInfo.innerHTML = `Current Player - ${currentPlayer}`;
 
@@ -68,5 +69,44 @@ newGameBtn.addEventListener("click", startGame)
 
 
 function checkGameEnd(){
+    let answer = "";
+
+
+    winningPosition.forEach((position) => {
+        if((gameGrid[position[0]] !== "" || gameGrid[position[1]] !== "" || gameGrid[position[2]] !== "")
+        &&(gameGrid[position[0]] === gameGrid[position[1]])  && (gameGrid[position[1]] === gameGrid[position[2]])) {
     
+            if(gameGrid[position[0]] == "X")
+
+                answer = "X"
+
+                else
+                answer = "O"
+
+                boxes.forEach((box) => {
+                    box.style.pointerEvents = "none"
+                })
+
+            boxes[position[0]].classList.add("winner")
+            boxes[position[1]].classList.add("winner")
+            boxes[position[2]].classList.add("winner")
+        }
+    });
+
+    if(answer !== ""){
+        gameInfo.innerHTML = `Winner Player - ${answer}`;
+        newGameBtn.classList.add("active")
+    }
+
+
+    let fillCount = 0;
+    gameGrid.forEach((box) => {
+        if(box !== "")
+        fillCount++
+    });
+
+    if(fillCount === 9) {
+        gameInfo.innerHTML = "Game Tie !"
+        newGameBtn.classList.add("active")
+    }
 }

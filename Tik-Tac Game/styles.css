@@ -80,8 +80,9 @@ html, body{
     opacity: 1;
 }
 
-#winner{
-    background-color: red;
+.winner{
+    background-color: rgb(148, 146, 141);
+    color: black;
 }
 
 h3{
