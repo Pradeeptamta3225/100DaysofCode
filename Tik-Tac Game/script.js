@@ -6,7 +6,7 @@ let currentPlayer;
 let gameGrid;
 
 
-const winningPosition = [
+const winningPattern = [
         [0,1,2],
         [3,4,5],
         [6,7,8],
@@ -72,7 +72,7 @@ function checkGameEnd(){
     let answer = "";
 
 
-    winningPosition.forEach((position) => {
+    winningPattern.forEach((position) => {
         if((gameGrid[position[0]] !== "" || gameGrid[position[1]] !== "" || gameGrid[position[2]] !== "")
         &&(gameGrid[position[0]] === gameGrid[position[1]])  && (gameGrid[position[1]] === gameGrid[position[2]])) {
     
