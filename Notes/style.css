@@ -69,3 +69,13 @@
     right: 1rem;
     cursor: pointer;
 }
+
+h3{
+    color: white;
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 2rem;
+    
+}
